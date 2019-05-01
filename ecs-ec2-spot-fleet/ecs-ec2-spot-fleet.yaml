@@ -208,6 +208,10 @@ Resources:
         FromPort: 22
         IpProtocol: tcp
         ToPort: 22
+      - IpProtocol: tcp
+        FromPort: '8500'
+        ToPort: '8500'
+        CidrIp:  172.20.145.97/24
       VpcId:
         Ref: vpc
     Type: AWS::EC2::SecurityGroup
